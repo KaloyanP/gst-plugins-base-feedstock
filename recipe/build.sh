@@ -6,7 +6,7 @@ cp -r $PREFIX/lib/libffi* $PREFIX/lib64
 
 # The datarootdir option places the docs into a temp folder that won't
 # be included in the package (it is about 12MB).
-./configure --disable-examples --prefix="$PREFIX" --datarootdir=`pwd`/tmpshare
+./configure --disable-examples --prefix="$PREFIX" --enable-introspection
 make
 # Some tests fail because not all plugins are built and it seems
 # tests expect all plugins
